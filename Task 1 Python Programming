@@ -1,49 +1,49 @@
 def calculator():
+    
+    def add(x, y):
+        return x + y
+
+    def subract(x, y):
+        return x - y
+
+    def multiply(x, y):
+        return x * y
+
+    def divide(x, y):
+      if y == 0:
+         return "Error: Cannot divide by zero"
+      else:
+          return x / y
+
+    def main():
+        print("Welcome to the Calculator...!")
+        print("Choose the operation")
+        print("1.Addition")
+        print("2.Subraction")
+        print("3.Multiplication")
+        print("4.Division")
+
+    choice = input("Enter choice (1/2/3/4): ")
+
     #prompt user for the first number
-    x = float(input("Enter first number: "))
+    num1 = float(input("Enter first number: "))
 
     #prompt user for the second number
-    y = float(input("Enter seconf number: "))
+    num2 = float(input("Enter seconf number: "))
 
-def add(x, y):
-    return x + y
+    if choice == '1':
+       print("Result: ", add(num1, num2))
+    elif choice == '2':
+       print("Result: ", subract(num1, num2))
+    elif choice == '3':
+       print("Result: ", multiply(num1, num2))
+    elif choice == '4':
+       print("Result: ", divide(num1, num2))
+    else:
+       print("Invalid, Please enter a valid digit.")
 
-def subract(x, y):
-    return x - y
-
-def multiply(x, y):
-    return x * y
-
-def divide(x, y):
-if y != 0:
-   return x / y
-     else:
-        print("Error: Cannot divide by zero")
-        return
-else:
-     print("Invalid Operation")
-     return
-
-def main():
-    print("Welcome to the Calculator...!")
-    print("Choose the operation")
-    print("1.Addition")
-    print("2.Subraction")
-    print("3.Multiplication")
-    print("4.Division")
-
-choice = input("Enter choice (1/2/3/4): ")
-
-if choice == '1':
-   print("Result: ", add(x, y))
-elif choice == '2':
-   print("Result: ", subract(x, y))
-elif choice == '3':
-  print("Result: ", multiply(x, y))
-elif choice == '4':
-  print("Result: ", divide(x, y))
-else:
-  print("Invalid, Please enter a valid digit.")
+if __name__ =="__main__":
+    calculator()
 
 
     
